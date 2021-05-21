@@ -9,10 +9,12 @@ function mySwap(el1, el2) {
   el2.style.width = transform1;
 }
 
-async function bubbleSort(delay=500) {
+async function bubbleSort(delay) {
+  // disabled();
+
   var i,j,k;
-  for ( i = 0; i < 35; i++) {
-    for ( j = 0; j < 34 - i; j++) {
+  for ( i = 0; i < n; i++) {
+    for ( j = 0; j < n-1- i; j++) {
       var t = j + 1;
       let el1 = document.querySelector("#id" + t);
       let el2 = document.querySelector("#id" + j);
@@ -40,7 +42,7 @@ async function bubbleSort(delay=500) {
       }
     }
   clearTimeout(myTimeOut);
-  var finalColorChange=(34-i);
+  var finalColorChange=(n-1-i);
   document.getElementById("id"+finalColorChange).style.backgroundColor = "green";
   }
 
@@ -48,5 +50,7 @@ async function bubbleSort(delay=500) {
   console.log(k);  
   document.getElementById("id"+(k)).style.backgroundColor = "green";
   
+
+  // resume();
   console.log(mainArray);
 }

@@ -1,5 +1,6 @@
 var mainArray = [];
-
+var n=20;
+var delay=300;
 function randomNumbers(min, max) {
   return 5 + Math.floor(Math.random() * (max - min));
 }
@@ -16,7 +17,7 @@ function newArray() {
   const barComponent = document.querySelector("#barComponent");
   removeAllChildNodes(barComponent);
 
-  for (var i = 0; i < 35; i++) {
+  for (var i = 0; i < n; i++) {
     const x = randomNumbers(5, 100);
     mainArray.push(x);
     var temp = document.createElement("div");
@@ -29,9 +30,46 @@ function newArray() {
   }
 }
 
-function disabled(){
+// function disabled(){
 
-document.getElementById("newArray").disabled = true;
-document.getElementById("newArray").style.backgroundColor = "#d8b6ff";
+// document.getElementById("newArray").disabled = true;
+// document.getElementById("newArray").style.backgroundColor = "#d8b6ff";
 
-}
+// document.getElementById("bubbleSort").disabled = true;
+// document.getElementById("bubbleSort").style.backgroundColor = "#d8b6ff";
+
+// document.getElementById("selectionSort").disabled = true;
+// document.getElementById("selectionSort").style.backgroundColor = "#d8b6ff";
+
+// document.getElementById("insertionSort").disabled = true;
+// document.getElementById("insertionSort").style.backgroundColor = "#d8b6ff";
+
+// document.getElementById("resume").disabled = true;
+// document.getElementById("resume").style.backgroundColor = "#d8b6ff";
+
+// document.getElementById("pause").disabled = false;
+// document.getElementById("pause").style.backgroundColor = "yellow";  
+
+// }
+
+// function resume(){
+
+//   document.getElementById("newArray").disabled = false;
+//   document.getElementById("newArray").style.backgroundColor = "#d8b6ff";
+  
+//   document.getElementById("bubbleSort").disabled = false;
+//   document.getElementById("bubbleSort").style.backgroundColor = "#d8b6ff";
+  
+//   document.getElementById("selectionSort").disabled = false;
+//   document.getElementById("selectionSort").style.backgroundColor = "#d8b6ff";
+  
+//   document.getElementById("insertionSort").disabled = false;
+//   document.getElementById("insertionSort").style.backgroundColor = "#d8b6ff";
+  
+//   document.getElementById("resume").disabled = false;
+//   document.getElementById("resume").style.backgroundColor = "#d8b6ff";
+  
+//   document.getElementById("pause").disabled = true;
+//   document.getElementById("pause").style.backgroundColor = "yellow";
+  
+//   }

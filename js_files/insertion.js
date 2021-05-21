@@ -10,9 +10,9 @@ function mySwap(el1, el2) {
     
 }
 
-async function insertionSort(delay=2){
-
-    for(var i=0;i<35;i++){
+async function insertionSort(delay){
+    // disabled();
+    for(var i=0;i<n;i++){
 
         var key=mainArray[i];
         var j=i-1;
@@ -39,5 +39,6 @@ async function insertionSort(delay=2){
         document.getElementById("id"+finalColorChange).style.backgroundColor = "green";
     }
 
+    // resume();
     console.log(mainArray);
 }

@@ -10,14 +10,14 @@ function mySwap(el1, el2) {
 
 }
 
-async function selectionSort(delay=3){
-
-    for(var i=0;i<35;i++){
+async function selectionSort(delay){
+    // disabled();
+    for(var i=0;i<n;i++){
         
         var correctIndex=i;
         var x = mainArray[correctIndex]; 
        
-        for(var j=i+1;j<35;j++){
+        for(var j=i+1;j<n;j++){
             if(x>mainArray[j]){
                 correctIndex=j;
                 x = mainArray[correctIndex];                        
@@ -41,5 +41,7 @@ async function selectionSort(delay=3){
         var finalColorChange=(i);
         document.getElementById("id"+finalColorChange).style.backgroundColor = "green";
     }
+
+    // resume();
     console.log(mainArray);
 }
