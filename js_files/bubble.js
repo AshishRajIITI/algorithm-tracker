@@ -9,7 +9,7 @@ function mySwap(el1, el2) {
   el2.style.width = transform1;
 }
 
-async function bubbleSort(delay) {
+async function bubbleSort(delay=mainDelay) {
   // disabled();
 
   var i,j,k;
@@ -31,11 +31,11 @@ async function bubbleSort(delay) {
         mainArray[t] = mainArray[j];
         mainArray[j] = temp;
 
-        el1.style.backgroundColor="yellow";    
+        el1.style.backgroundColor="red";    
       }
       var change = window.getComputedStyle(el1).getPropertyValue("background-color");
      
-      if(change==="rgb(255, 255, 0)"){
+      if(change==="rgb(255, 0, 0)"){
         var myTimeOut=setTimeout(()=>{
           el1.style.backgroundColor = "blue"; 
         },delay);              
@@ -43,12 +43,12 @@ async function bubbleSort(delay) {
     }
   clearTimeout(myTimeOut);
   var finalColorChange=(n-1-i);
-  document.getElementById("id"+finalColorChange).style.backgroundColor = "green";
+  document.getElementById("id"+finalColorChange).style.backgroundColor = "#90EE90";
   }
 
   clearTimeout(myTimeOut);
   console.log(k);  
-  document.getElementById("id"+(k)).style.backgroundColor = "green";
+  document.getElementById("id"+(k)).style.backgroundColor = "90EE90";
   
 
   // resume();

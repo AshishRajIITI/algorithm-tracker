@@ -15,22 +15,30 @@
 
   </head>
   <body>
-    <navbar>
+    <div class="navBar">
       <header>Algorithm-Visualiser</header>
+    </div>
 
-      <button id="newArray" class="newArray" onclick=newArray()>Generate New-Array</button>
-      <button id="bubleSort" class="bubleSort" onclick=bubbleSort()>Bubble-Sort</button>
-      <button id="selectionSort" class="selectionSort" onclick= selectionSort()>Selection Sort</button>
-      <button id="insertionSort" class="insertionSort" onclick=insertionSort()>Insertion Sort</button>
-      <button id="pause" class="pause" onclick=disabled()>Pause</button>
-      <button id="resume" class="resume" onclick=resume()>Resume</button>
+    <div class="buttonList">
 
-      <!-- <button id="quickSort" class="quickSort" onclick=quickSort()>Quick Sort</button> -->
-      <button id="mergeSort" class="mergeSort" onclick=myMergeSort() >Merge Sort</button>
-    </navbar>
+      <button id="newArray" class="button" onclick=newArray()>Generate New-Array</button>
+      <button id="bubleSort" class="button" onclick=bubbleSort()>Bubble-Sort</button>
+      <button id="selectionSort" class="button" onclick= selectionSort()>Selection Sort</button>
+      <button id="insertionSort" class="button" onclick=insertionSort()>Insertion Sort</button>
+      <button id="pause" class="button" onclick=pause()>Pause</button>
+      <button id="resume" class="button" onclick=resume()>Resume</button>
+    
+    </div>
+<!-- 
+      <button id="quickSort" class="quickSort" onclick=quickSort()>Quick Sort</button>
+      <button id="mergeSort" class="mergeSort" onclick=myMergeSort() >Merge Sort</button> -->
+   
 
     <div id="barComponent">
 
+    </div>
+      <div class="footer">
+        <footer> Made with love by Ashish Raj</footer>
     </div>
   </body>
 </html>

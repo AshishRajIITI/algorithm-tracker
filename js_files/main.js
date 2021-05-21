@@ -1,6 +1,7 @@
 var mainArray = [];
-var n=20;
-var delay=300;
+var n=15;
+var mainDelay=1500;
+
 function randomNumbers(min, max) {
   return 5 + Math.floor(Math.random() * (max - min));
 }
@@ -26,26 +27,26 @@ function newArray() {
     temp.className = "eachBar";
     document.getElementById("barComponent").appendChild(temp);
     var setWidth = document.getElementById("id" + i).innerHTML;
-    document.getElementById("id" + i).style.width = setWidth * 10 + "px";
+    document.getElementById("id" + i).style.width = setWidth * 9 + "px";
   }
 }
 
-// function disabled(){
+// function pause(){
 
 // document.getElementById("newArray").disabled = true;
-// document.getElementById("newArray").style.backgroundColor = "#d8b6ff";
+// document.getElementById("newArray").style.backgroundColor = "pink";
 
 // document.getElementById("bubbleSort").disabled = true;
-// document.getElementById("bubbleSort").style.backgroundColor = "#d8b6ff";
+// document.getElementById("bubbleSort").style.backgroundColor = "pink";
 
 // document.getElementById("selectionSort").disabled = true;
-// document.getElementById("selectionSort").style.backgroundColor = "#d8b6ff";
+// document.getElementById("selectionSort").style.backgroundColor = "pink";
 
 // document.getElementById("insertionSort").disabled = true;
-// document.getElementById("insertionSort").style.backgroundColor = "#d8b6ff";
+// document.getElementById("insertionSort").style.backgroundColor = "pink";
 
 // document.getElementById("resume").disabled = true;
-// document.getElementById("resume").style.backgroundColor = "#d8b6ff";
+// document.getElementById("resume").style.backgroundColor = "pink";
 
 // document.getElementById("pause").disabled = false;
 // document.getElementById("pause").style.backgroundColor = "yellow";  

@@ -10,7 +10,7 @@ function mySwap(el1, el2) {
 
 }
 
-async function selectionSort(delay){
+async function selectionSort(delay=mainDelay){
     // disabled();
     for(var i=0;i<n;i++){
         

@@ -10,8 +10,8 @@ function mySwap(el1, el2) {
     
 }
 
-async function insertionSort(delay){
-    // disabled();
+async function insertionSort(delay=mainDelay){
+    // pause();
     for(var i=0;i<n;i++){
 
         var key=mainArray[i];
