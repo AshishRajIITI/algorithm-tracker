@@ -9,15 +9,17 @@ function mySwap(el1, el2) {
   el2.style.width = transform1;
 }
 
-async function bubbleSort(delay=30) {
-  for (var i = 0; i < 35; i++) {
-    for (var j = 0; j < 34 - i; j++) {
+async function bubbleSort(delay=500) {
+  var i,j,k;
+  for ( i = 0; i < 35; i++) {
+    for ( j = 0; j < 34 - i; j++) {
       var t = j + 1;
       let el1 = document.querySelector("#id" + t);
       let el2 = document.querySelector("#id" + j);
 
       if (mainArray[t] < mainArray[j]) {
-        await new Promise((resolve) =>
+        k=j;
+          await new Promise((resolve) =>
           setTimeout(() => {
             resolve();
           }, delay)
@@ -26,11 +28,25 @@ async function bubbleSort(delay=30) {
         var temp = mainArray[t];
         mainArray[t] = mainArray[j];
         mainArray[j] = temp;
+
+        el1.style.backgroundColor="yellow";    
+      }
+      var change = window.getComputedStyle(el1).getPropertyValue("background-color");
+     
+      if(change==="rgb(255, 255, 0)"){
+        var myTimeOut=setTimeout(()=>{
+          el1.style.backgroundColor = "blue"; 
+        },delay);              
       }
     }
-    
+  clearTimeout(myTimeOut);
   var finalColorChange=(34-i);
   document.getElementById("id"+finalColorChange).style.backgroundColor = "green";
   }
+
+  clearTimeout(myTimeOut);
+  console.log(k);  
+  document.getElementById("id"+(k)).style.backgroundColor = "green";
+  
   console.log(mainArray);
 }
