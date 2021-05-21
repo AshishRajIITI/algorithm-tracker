@@ -7,12 +7,12 @@ function mySwap(el1, el2) {
 
     el1.style.width = transform2;
     el2.style.width = transform1;
-
+    
 }
 
-function insertionSort(){
+async function insertionSort(delay=2){
 
-    for(var i=0;i<=34;i++){
+    for(var i=0;i<35;i++){
 
         var key=mainArray[i];
         var j=i-1;
@@ -24,12 +24,19 @@ function insertionSort(){
             let el2 = document.querySelector("#id" + j);
       
             mainArray[t]=mainArray[j];
+            await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve();
+          }, delay)
+        );
+
             mySwap(el1,el2);
             j--;
         }
 
         mainArray[j+1]=key;                
-        
+        var finalColorChange=(i);
+        document.getElementById("id"+finalColorChange).style.backgroundColor = "green";
     }
 
     console.log(mainArray);

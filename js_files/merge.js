@@ -9,39 +9,62 @@ function mySwap(el1, el2) {
   el2.style.width = transform1;
 }
 
-function mergeSort(mainArray) {
-  const t = myMergeSort(mainArray);
+function merge(arr, l, m, r){
 
-  console.log(t);
+	var n1 = m - l + 1;
+	var n2 = r - m;
+
+  var L = new Array(n1);
+	var R = new Array(n2);
+
+	// Copy data to temp arrays L[] and R[]
+	for (var i = 0; i < n1; i++)
+		L[i] = arr[l + i];
+	for (var j = 0; j < n2; j++)
+		R[j] = arr[m + 1 + j];
+
+
+	var i = 0;
+	var j = 0;
+	var k = l;
+
+	while (i < n1 && j < n2) {
+		if (L[i] <= R[j]) {
+			arr[k] = L[i];
+			i++;
+		}
+		else {
+			arr[k] = R[j];
+			j++;
+		}
+		k++;
+	}
+
+	while (i < n1) {
+		arr[k] = L[i];
+		i++;
+		k++;
+	}
+
+	while (j < n2) {
+		arr[k] = R[j];
+		j++;
+		k++;
+	}
 }
 
-const myMergeSort = (arr) => {
-  if (arr.length <= 1) return arr;
-  let mid = Math.floor(arr.length / 2),
-    left = myMergeSort(arr.slice(0, mid)),
-    right = myMergeSort(arr.slice(mid));
+function mergeSort(arr,l, r){
+	if(l>=r){
+		return;//returns recursively
+	}
+	var m =l+ parseInt((r-l)/2);
+	mergeSort(arr,l,m);
+	mergeSort(arr,m+1,r);
+	merge(arr,l,m,r);
+}
 
-  return merge(left, right);
-};
 
-const merge = (arr1, arr2) => {
-  let sorted = [];
-
-  while (arr1.length && arr2.length) {
-
-    // let el1 = document.querySelector("#id" + t);
-    // let el2 = document.querySelector("#id" + j);
-
-    if (arr1[0] < arr2[0]){
-        
-     sorted.push(arr1.shift());
-
-    }
-    else{
-     sorted.push(arr2.shift());
-    }
-
-  }
-
-  return sorted.concat(arr1.slice().concat(arr2.slice()));
-};
+function myMergeSort(){
+  mergeSort(mainArray,0,34);
+  console.log(mainArray);
+}

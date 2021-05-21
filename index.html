@@ -18,12 +18,15 @@
     <navbar>
       <header>Algorithm-Visualiser</header>
 
-      <button id="newArray" class="newArray" onclick=newArray()>New-Array</button>
-      <button id="bubleSort" class="bubleSort" onclick=bubbleSort()>Bubble-Sort</button>
-      <button id="selectionSort" class="selectionSort">Selection Sort</button>
+      <button id="newArray" class="newArray" onclick=newArray()>Generate New-Array</button>
+      <button id="bubleSort" class="bubleSort" onclick="bubbleSort(), disabled()">Bubble-Sort</button>
+      <button id="selectionSort" class="selectionSort" onclick= selectionSort()>Selection Sort</button>
       <button id="insertionSort" class="insertionSort" onclick=insertionSort()>Insertion Sort</button>
-      <button id="quickSort" class="quickSort" onclick=quickSort()>Quick Sort</button>
-      <button id="mergeSort" class="mergeSort" onclick=mergeSort(mainArray) >Merge Sort</button>
+      <button id="pause" class="pause" onclick=pause()>Pause</button>
+
+
+      <!-- <button id="quickSort" class="quickSort" onclick=quickSort()>Quick Sort</button> -->
+      <button id="mergeSort" class="mergeSort" onclick=myMergeSort() >Merge Sort</button>
     </navbar>
 
     <div id="barComponent">

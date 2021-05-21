@@ -5,6 +5,7 @@ function randomNumbers(min, max) {
 }
 
 function newArray() {
+  
   function removeAllChildNodes(parent) {
     mainArray=[];
     while (parent.firstChild) {
@@ -26,4 +27,11 @@ function newArray() {
     var setWidth = document.getElementById("id" + i).innerHTML;
     document.getElementById("id" + i).style.width = setWidth * 10 + "px";
   }
+}
+
+function disabled(){
+
+document.getElementById("newArray").disabled = true;
+document.getElementById("newArray").style.backgroundColor = "#d8b6ff";
+
 }
