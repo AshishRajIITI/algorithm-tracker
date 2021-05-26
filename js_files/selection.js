@@ -11,7 +11,7 @@ function mySwap(el1, el2) {
 }
 
 async function selectionSort(delay=mainDelay){
-    // disabled();
+  disable();
     for(var i=0;i<n;i++){
         
         var correctIndex=i;
@@ -66,9 +66,8 @@ async function selectionSort(delay=mainDelay){
           }, delay)
         );
         
-        document.getElementById("id"+finalColorChange).style.backgroundColor = "green";
+        document.getElementById("id"+finalColorChange).style.backgroundColor = "#10f123";
     }
 
-    // resume();
-    console.log(mainArray);
+    resume();
 }

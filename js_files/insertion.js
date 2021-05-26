@@ -11,7 +11,7 @@ function mySwap(el1, el2) {
 }
 
 async function insertionSort(delay=mainDelay){
-    // pause();
+    disable();
     for(var i=0;i<n;i++){
 
         var key=mainArray[i];
@@ -63,9 +63,8 @@ async function insertionSort(delay=mainDelay){
             resolve();
         }, delay)
     );
-        document.getElementById("id"+i).style.background = "green";
+        document.getElementById("id"+i).style.background = "#10f123";
     }
 
-    // resume();
-    console.log(mainArray);
+    resume();
 }

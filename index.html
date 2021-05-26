@@ -13,31 +13,48 @@
     <script src="./js_files/selection.js"></script>
     <script src="./js_files/insertion.js"></script>
     <script src="./js_files/disable.js"></script>
-
+    <script src="./js_files/resume.js"></script>
   </head>
-  <body onload=newArray()>
+  <body onload="newArray()">
     <div class="navBar">
-      <header>Algorithm-Visualiser</header>
+      <a href="/" class="logo">
+        <img
+          style="width: 50px; height: 40px"
+          src="./image/image-project.png"
+          alt="" /></a
+      ><span>Algorithm-Visualiser</span>
     </div>
 
     <div class="buttonList">
-
-      <button id="newArray" class="button" onclick=newArray()>Generate New-Array</button>
-      <button id="bubbleSort" class="button" onclick=bubbleSort()>Bubble-Sort</button>
-      <button id="selectionSort" class="button" onclick= selectionSort()>Selection Sort</button>
-      <button id="insertionSort" class="button" onclick=insertionSort()>Insertion Sort</button>
-     
-      <button id="quickSort" class="button" onclick=quickSort()>Quick Sort</button>
-      <button id="mergeSort" class="button" onclick=myMergeSort() >Merge Sort</button>
+      <button id="newArray" class="button" onclick="newArray()">
+        Generate New-Array
+      </button>
+      <button id="bubbleSort" class="button" onclick="bubbleSort()">
+        Bubble-Sort
+      </button>
+      <button id="selectionSort" class="button" onclick="selectionSort()">
+        Selection Sort
+      </button>
+      <button id="insertionSort" class="button" onclick="insertionSort()">
+        Insertion Sort
+      </button>
+      <button id="quickSort" class="button" onclick="quickSort()">
+        Quick Sort
+      </button>
+      <button id="mergeSort" class="button" onclick="myMergeSort()">
+        Merge Sort
+      </button>
     </div>
 
-   
+    <div id="barComponent"></div>
 
-    <div id="barComponent">
-
+    <div class="buttonList">
+      <button id="fastForward" class="bottom-button" onclick="fastForward()">
+        Fast-Forward
+      </button>
     </div>
-      <div class="footer">
-        <footer> Made with love by Ashish Raj</footer>
+    <div class="footer">
+      <footer>Made with love by Ashish Raj</footer>
     </div>
   </body>
 </html>
