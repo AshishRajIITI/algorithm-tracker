@@ -27,6 +27,9 @@ async function selectionSort(delay=mainDelay){
         var el1 = document.querySelector("#id"+i);
         var el2 = document.querySelector("#id"+correctIndex);
 
+        el1.style.background = "red";
+        el2.style.background = "red";
+
         await new Promise((resolve) =>
           setTimeout(() => {
             resolve();
@@ -37,6 +40,9 @@ async function selectionSort(delay=mainDelay){
         var temp=mainArray[i];
         mainArray[i]=mainArray[correctIndex];
         mainArray[correctIndex]=temp;
+
+        el1.style.background = "blue";
+        el2.style.background = "blue";
 
         var finalColorChange=(i);
         document.getElementById("id"+finalColorChange).style.backgroundColor = "green";

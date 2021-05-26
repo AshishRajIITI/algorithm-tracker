@@ -16,27 +16,33 @@ async function insertionSort(delay=mainDelay){
 
         var key=mainArray[i];
         var j=i-1;
-
+        let el1,el2;        
+        
         while(j>=0 && mainArray[j]>key){
-            var t = j + 1;
-
-            let el1 = document.querySelector("#id" + t);
-            let el2 = document.querySelector("#id" + j);
-      
-            mainArray[t]=mainArray[j];
+            
+            el2 = document.querySelector("#id" +j);
+            el2.style.background = "red";
+            el1=document.querySelector("#id"+ (j+1));
+            el1.style.background = "red";
+            mainArray[j+1]=mainArray[j];
             await new Promise((resolve) =>
-          setTimeout(() => {
-            resolve();
-          }, delay)
+            setTimeout(() => {
+                resolve();
+            }, delay)
         );
 
             mySwap(el1,el2);
             j--;
+            
+        el1.style.background = "blue";
+            el2.style.background = "blue";
         }
 
         mainArray[j+1]=key;                
-        var finalColorChange=(i);
-        document.getElementById("id"+finalColorChange).style.backgroundColor = "green";
+        
+    }
+    for(var i=0;i<n;i++){
+        document.getElementById("id"+i).style.background = "green";
     }
 
     // resume();
