@@ -5,4 +5,5 @@ function resume(){
     document.getElementById("insertionSort").disabled=false;
     document.getElementById("mergeSort").disabled=false;
     document.getElementById("quickSort").disabled=false;
+    document.getElementById("arr_sz").disabled=false;    
 }

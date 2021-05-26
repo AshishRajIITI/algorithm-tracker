@@ -5,4 +5,5 @@ function disable(){
     document.getElementById("insertionSort").disabled=true;
     document.getElementById("mergeSort").disabled=true;
     document.getElementById("quickSort").disabled=true;
+    document.getElementById("arr_sz").disabled=true;    
 }

@@ -55,9 +55,13 @@
       </button>
     </div>
 
-    <div id="barComponent"></div>
-
     <div class="buttonList">
+      <div>
+        <label for="array_sz" style="font-size:x-large">Array-size</label>
+         <input style="margin-top: 25px;" id="arr_sz" name="array_sz" type="range" min=10 max=16 step=1 value=12>
+         <!-- <label for="speed" style="font-size:x-large">Sorting-speed</label>
+         <input style="margin-top: 25px;" id="speed" name="speed" type="range" min=20 max=1500 step=100 value=1000> -->
+      </div> 
       <button id="pause" class="bottom-button" onclick="location.reload()">
         <img src="./image/close.png" alt="" style="width: 20px" />
       </button>
@@ -67,7 +71,9 @@
       </button>
     </div>
 
+    <div id="barComponent"></div>
 
+   
     <div class="graphHeader">
       <a href="/" class="logo">
         <img

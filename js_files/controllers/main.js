@@ -1,18 +1,18 @@
 var mainArray = [];
-var n=15;
+var n;
 var mainDelay=100;
-var customWidth = 10;
+
 
 function randomNumbers(min, max) {
   return 5 + Math.floor(Math.random() * (max - min));
 }
-// function update_array_size(){
-//   newArray();
-// }
-
-// window.onload=update_array_size();
 
 function newArray() {
+
+var arr_size=document.querySelector("#arr_sz");
+n=arr_size.value;
+arr_size.addEventListener("input",newArray);
+
   
   function removeAllChildNodes(parent) {
     mainArray=[];
@@ -33,12 +33,9 @@ function newArray() {
     temp.className = "eachBar";
     document.getElementById("barComponent").appendChild(temp);
     var setWidth = document.getElementById("id" + i).innerHTML;
-    if(window.innerWidth>500){
-       document.getElementById("id" + i).style.width = setWidth * (customWidth) + "px";
-     }
-     else{
-      document.getElementById("id" + i).style.width = setWidth * (0.5*customWidth) + "px";
-     }
+    
+       document.getElementById("id" + i).style.width = setWidth * 9 + "px";
+       
     temp.innerHTML = "";
   }
 }
