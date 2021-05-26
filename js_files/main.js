@@ -1,10 +1,15 @@
 var mainArray = [];
 var n=15;
-var mainDelay=1500;
+var mainDelay=10;
 
 function randomNumbers(min, max) {
   return 5 + Math.floor(Math.random() * (max - min));
 }
+// function update_array_size(){
+//   newArray();
+// }
+
+// window.onload=update_array_size();
 
 function newArray() {
   
@@ -31,54 +36,31 @@ function newArray() {
   }
 }
 
-function update_array_size()
-{
-    array_size=inp_as.value;
-    newArray();
-}
 
-window.onload=update_array_size();
 
 // function pause(){
 
-// document.getElementById("newArray").disabled = true;
-// document.getElementById("newArray").style.backgroundColor = "pink";
-
-// document.getElementById("bubbleSort").disabled = true;
-// document.getElementById("bubbleSort").style.backgroundColor = "pink";
-
-// document.getElementById("selectionSort").disabled = true;
-// document.getElementById("selectionSort").style.backgroundColor = "pink";
-
-// document.getElementById("insertionSort").disabled = true;
-// document.getElementById("insertionSort").style.backgroundColor = "pink";
-
-// document.getElementById("resume").disabled = true;
-// document.getElementById("resume").style.backgroundColor = "pink";
-
-// document.getElementById("pause").disabled = false;
-// document.getElementById("pause").style.backgroundColor = "yellow";  
+// document.getElementsByClassName("button").disabled = true;
+// document.getElementsByClassName("button").style.background = "pink";
 
 // }
 
 // function resume(){
 
-//   document.getElementById("newArray").disabled = false;
-//   document.getElementById("newArray").style.backgroundColor = "#d8b6ff";
+  // document.getElementById("newArray").disabled = false;
+  // document.getElementById("newArray").style.backgroundColor = "#d8b6ff";
   
-//   document.getElementById("bubbleSort").disabled = false;
-//   document.getElementById("bubbleSort").style.backgroundColor = "#d8b6ff";
+  // document.getElementById("bubbleSort").disabled = false;
+  // document.getElementById("bubbleSort").style.backgroundColor = "#d8b6ff";
   
-//   document.getElementById("selectionSort").disabled = false;
-//   document.getElementById("selectionSort").style.backgroundColor = "#d8b6ff";
+  // document.getElementById("selectionSort").disabled = false;
+  // document.getElementById("selectionSort").style.backgroundColor = "#d8b6ff";
   
-//   document.getElementById("insertionSort").disabled = false;
-//   document.getElementById("insertionSort").style.backgroundColor = "#d8b6ff";
+  // document.getElementById("insertionSort").disabled = false;
+  // document.getElementById("insertionSort").style.backgroundColor = "#d8b6ff";
   
-//   document.getElementById("resume").disabled = false;
-//   document.getElementById("resume").style.backgroundColor = "#d8b6ff";
+  // document.getElementById("resume").disabled = false;
+  // document.getElementById("resume").style.backgroundColor = "#d8b6ff";
   
-//   document.getElementById("pause").disabled = true;
-//   document.getElementById("pause").style.backgroundColor = "yellow";
   
-//   }
+  // }

@@ -9,48 +9,40 @@ function mySwap(el1, el2) {
   el2.style.width = transform1;
 }
 
-async function bubbleSort(delay=mainDelay) {
-  // disabled();
+async function bubbleSort(delay=mainDelay) {  
+  
 
-  var i,j,k;
+  var i,j;
   for ( i = 0; i < n; i++) {
     for ( j = 0; j < n-1- i; j++) {
       var t = j + 1;
       let el1 = document.querySelector("#id" + t);
       let el2 = document.querySelector("#id" + j);
 
+      el1.style.background = "red";
+      el2.style.background = "red";
+
       if (mainArray[t] < mainArray[j]) {
-        k=j;
+        
           await new Promise((resolve) =>
           setTimeout(() => {
             resolve();
           }, delay)
-        );
+          );
+
         mySwap(el1, el2);
         var temp = mainArray[t];
         mainArray[t] = mainArray[j];
-        mainArray[j] = temp;
+        mainArray[j] = temp;  
+      }
 
-        el1.style.backgroundColor="red";    
-      }
-      var change = window.getComputedStyle(el1).getPropertyValue("background-color");
-     
-      if(change==="rgb(255, 0, 0)"){
-        var myTimeOut=setTimeout(()=>{
-          el1.style.backgroundColor = "blue"; 
-        },delay);              
-      }
+      el1.style.background = "blue";
+      el2.style.background = "blue";
+                    
     }
-  clearTimeout(myTimeOut);
-  var finalColorChange=(n-1-i);
-  document.getElementById("id"+finalColorChange).style.backgroundColor = "#90EE90";
+    document.querySelector("#id" +(n-1-i)).style.background="green";
+
   }
 
-  clearTimeout(myTimeOut);
-  console.log(k);  
-  document.getElementById("id"+(k)).style.backgroundColor = "90EE90";
-  
-
-  // resume();
   console.log(mainArray);
 }
