@@ -1,6 +1,6 @@
 var mainArray = [];
 var n=15;
-var mainDelay=5;
+var mainDelay=100;
 var customWidth = 10;
 
 function randomNumbers(min, max) {
@@ -44,3 +44,6 @@ function newArray() {
 }
 
 
+function fastForward(){
+  mainDelay=15;
+}

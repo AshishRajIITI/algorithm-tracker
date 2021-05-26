@@ -38,7 +38,12 @@ async function selectionSort(delay=mainDelay){
         
         var el2 = document.querySelector("#id"+correctIndex);        
         el2.style.background = "red";
-                
+             
+        await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve();
+          }, delay)
+        );
         mySwap(el1,el2);
         var temp=mainArray[i];
         mainArray[i]=mainArray[correctIndex];
@@ -64,8 +69,7 @@ async function selectionSort(delay=mainDelay){
           setTimeout(() => {
             resolve();
           }, delay)
-        );
-        
+        );        
         document.getElementById("id"+finalColorChange).style.backgroundColor = "#10f123";
     }
 

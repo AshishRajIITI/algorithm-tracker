@@ -8,8 +8,8 @@ function mySwap(el1, el2) {
   el1.style.width = transform2;
   el2.style.width = transform1;
 }
-
-async function bubbleSort(delay=mainDelay) {  
+var delay=mainDelay;
+async function bubbleSort() {  
   
   disable();
 

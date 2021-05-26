@@ -1,5 +1,6 @@
 async function myMergeSort() {
   disable();
+
   await mergeSort(mainArray, 0, n - 1);
   await new Promise((resolve) =>
     setTimeout(() => {
@@ -12,7 +13,19 @@ async function myMergeSort() {
   
   resume();
 }
-const delay = mainDelay;
+var delay = mainDelay;
+
+async function mergeSort(arr, l, r) {
+  if (l >= r) {
+    return;
+  }
+  var m = l + parseInt((r - l) / 2);    
+  await mergeSort(arr, l, m);     
+  await mergeSort(arr, m + 1, r);   
+  await merge(arr, l, m, r);
+}
+
+
 async function merge(arr, l, m, r) {
   var n1 = m - l + 1;
   var n2 = r - m;
@@ -116,14 +129,4 @@ async function merge(arr, l, m, r) {
   }
 }
 
-
-async function mergeSort(arr, l, r) {
-  if (l >= r) {
-    return;
-  }
-  var m = l + parseInt((r - l) / 2);    
-  await mergeSort(arr, l, m);     
-  await mergeSort(arr, m + 1, r);   
-  await merge(arr, l, m, r);
-}
 
