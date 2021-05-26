@@ -21,27 +21,48 @@ async function insertionSort(delay=mainDelay){
         while(j>=0 && mainArray[j]>key){
             
             el2 = document.querySelector("#id" +j);
+            await new Promise((resolve) =>
+            setTimeout(() => {
+                resolve();
+            }, delay)
+            );
             el2.style.background = "red";
             el1=document.querySelector("#id"+ (j+1));
-            el1.style.background = "red";
-            mainArray[j+1]=mainArray[j];
             await new Promise((resolve) =>
             setTimeout(() => {
                 resolve();
             }, delay)
         );
+            el1.style.background = "red";
+            mainArray[j+1]=mainArray[j];
+          
 
             mySwap(el1,el2);
             j--;
             
+        await new Promise((resolve) =>
+            setTimeout(() => {
+                resolve();
+            }, delay)
+        );     
         el1.style.background = "blue";
-            el2.style.background = "blue";
+        await new Promise((resolve) =>
+        setTimeout(() => {
+            resolve();
+        }, delay)
+    );
+        el2.style.background = "blue";
         }
 
         mainArray[j+1]=key;                
         
     }
     for(var i=0;i<n;i++){
+        await new Promise((resolve) =>
+        setTimeout(() => {
+            resolve();
+        }, delay)
+    );
         document.getElementById("id"+i).style.background = "green";
     }
 

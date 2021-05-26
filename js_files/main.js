@@ -1,6 +1,6 @@
 var mainArray = [];
 var n=15;
-var mainDelay=1000;
+var mainDelay=500;
 
 function randomNumbers(min, max) {
   return 5 + Math.floor(Math.random() * (max - min));

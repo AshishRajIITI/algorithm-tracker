@@ -18,28 +18,45 @@ async function bubbleSort(delay=mainDelay) {
       var t = j + 1;
       let el1 = document.querySelector("#id" + t);
       let el2 = document.querySelector("#id" + j);
-
+      await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve();
+          }, delay)
+        );
       el1.style.background = "red";
+      await new Promise((resolve) =>
+      setTimeout(() => {
+          resolve();
+      }, delay)
+  );
       el2.style.background = "red";
 
       if (mainArray[t] < mainArray[j]) {
         
-          await new Promise((resolve) =>
-          setTimeout(() => {
-            resolve();
-          }, delay)
-          );
-
         mySwap(el1, el2);
         var temp = mainArray[t];
         mainArray[t] = mainArray[j];
         mainArray[j] = temp;  
       }
-
+      await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve();
+          }, delay)
+      );
       el1.style.background = "blue";
+      await new Promise((resolve) =>
+      setTimeout(() => {
+          resolve();
+      }, delay)
+  );
       el2.style.background = "blue";
                     
     }
+    await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve();
+          }, delay)
+          );
     document.querySelector("#id" +(n-1-i)).style.background="green";
 
   }
