@@ -45,26 +45,42 @@ async function merge(arr, l, m, r) {
   while (i < n1 && j < n2) {
     if (L[i] <= R[j]) {
       arr[k] = L[i];
+
       await new Promise((resolve) =>
         setTimeout(() => {
           resolve();
         }, delay)
       );
-      document.querySelector("#id" + k).style.width = Lstyle[i];
+      document.querySelector("#id" + k).style.background = "red";
+        await new Promise((resolve) =>
+        setTimeout(() => {
+          resolve();
+        }, delay)
+      );
+      document.querySelector("#id" + k).style.width = Lstyle[i];      
       i++;
-    } else {
+    } 
+    else {
       arr[k] = R[j];
       await new Promise((resolve) =>
         setTimeout(() => {
           resolve();
         }, delay)
       );
+      document.querySelector("#id" + k).style.background = "red";
+      await new Promise((resolve) =>
+      setTimeout(() => {
+        resolve();
+      }, delay)
+    );
       document.querySelector("#id" + k).style.width = Rstyle[j];
+     
       j++;
     }
+    if(k>0) document.querySelector("#id" + (k-1)).style.background = "blue";
     k++;
   }
-
+  if(k>0) document.querySelector("#id" + (k-1)).style.background = "blue";
   // Copy the remaining elements of
   // L[], if there are any
   while (i < n1) {
