@@ -45,7 +45,6 @@ body{
 }
 .button {    
     background-color: #f4511e;
-    border: none;
     border-radius: 5px;  
     border: 1px solid;
     padding: 10px;
@@ -67,7 +66,19 @@ body{
     padding: 10px;
     box-shadow: 5px 10px 8px #888888;
 }
-
+button:disabled,
+button[disabled]{
+  cursor: default;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+button[disabled]:hover{
+  opacity: 0.6;
+  border-radius: 5px;  
+  border: 1px solid;
+  box-shadow: 5px 10px 18px #888888;  
+}
 .buttonList{
     flex: auto;
 }

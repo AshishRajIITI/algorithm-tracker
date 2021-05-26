@@ -11,7 +11,7 @@ function mySwap(el1, el2) {
 
 async function bubbleSort(delay=mainDelay) {  
   
-
+  disable();
   var i,j;
   for ( i = 0; i < n; i++) {
     for ( j = 0; j < n-1- i; j++) {
