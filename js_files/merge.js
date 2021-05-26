@@ -3,7 +3,8 @@
 // Merges two subarrays of arr[].
 // First subarray is arr[l..m]
 // Second subarray is arr[m+1..r]
-function merge(arr, l, m, r)
+const delay= mainDelay;
+async function merge(arr, l, m, r)
 {
 	var n1 = m - l + 1;
 	var n2 = r - m;
@@ -45,12 +46,21 @@ function merge(arr, l, m, r)
 	while (i < n1 && j < n2) {
 		if (L[i] <= R[j]) {
 			arr[k] = L[i];
-            
+            await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve();
+          }, delay)
+        );
             document.querySelector("#id"+k).style.width=Lstyle[i];
 			i++;
 		}
 		else {
 			arr[k] = R[j];
+            await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve();
+          }, delay)
+        );
             document.querySelector("#id"+k).style.width=Rstyle[j];
 			j++;
 		}
@@ -61,6 +71,11 @@ function merge(arr, l, m, r)
 	// L[], if there are any
 	while (i < n1) {
 		arr[k] = L[i];
+        await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve();
+          }, delay)
+        );
         document.querySelector("#id"+k).style.width=Lstyle[i];
 		i++;
 		k++;
@@ -70,6 +85,11 @@ function merge(arr, l, m, r)
 	// R[], if there are any
 	while (j < n2) {
 		arr[k] = R[j];
+        await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve();
+          }, delay)
+        );
         document.querySelector("#id"+k).style.width=Rstyle[j];
 		j++;
 		k++;
@@ -79,14 +99,14 @@ function merge(arr, l, m, r)
 // l is for left index and r is
 // right index of the sub-array
 // of arr to be sorted */
-function mergeSort(arr,l, r){
+async function mergeSort(arr,l, r){
 	if(l>=r){
 		return;//returns recursively
 	}
 	var m =l+ parseInt((r-l)/2);
-	mergeSort(arr,l,m);
-	mergeSort(arr,m+1,r);
-	merge(arr,l,m,r);
+	await mergeSort(arr,l,m);
+	await mergeSort(arr,m+1,r);
+	await merge(arr,l,m,r);
 }
 
 // UTILITY FUNCTIONS
