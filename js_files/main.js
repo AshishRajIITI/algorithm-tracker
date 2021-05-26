@@ -31,6 +31,14 @@ function newArray() {
   }
 }
 
+function update_array_size()
+{
+    array_size=inp_as.value;
+    newArray();
+}
+
+window.onload=update_array_size();
+
 // function pause(){
 
 // document.getElementById("newArray").disabled = true;
